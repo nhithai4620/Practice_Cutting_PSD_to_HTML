@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <header class="header-container">
+  <header id="header-container" class="header-container">
       <div class="header-top">
         <div class="container-fluid">
             <div class="row justify-content-between">
@@ -30,13 +30,17 @@
                 </div>
                 <div class="col-auto nopadding">
                     <ul class="header-top__links-right">
-                        <li><a href="" style="font-weight: 500;"><img src="./assets/australia.png" alt=""> Australia <i class="fa fa-chevron-down"></i></a></li>
+                        <li>
+                            <a href="" style="font-weight: 500;">
+                                <img src="./assets/australia.png" alt=""> Australia<i class="fa fa-chevron-down "></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
       </div>
-      <div class="header-main">
+      <div id="header-main" class="header-main">
           <div class="container-fluid">
               <div class="row justify-content-between">
                   <div class="col-auto">
@@ -45,9 +49,30 @@
                             <a href="">inke.</a>
                         </div>
                         <div class="header-main-left__dropdowns">
-                            <div class="header-main-left__dropdown"><a href="">Shop <i class="fa fa-chevron-down"></i></a></div>
-                            <div class="header-main-left__dropdown"><a href="">Resources <i class="fa fa-chevron-down"></i></a></div>
-                            <div class="header-main-left__dropdown" style="background-color: #eae5ff;"><a href="">Sustainabilty  <i class="fa fa-chevron-down"></i></a></div>
+                            <div class="header-main-left__dropdown">
+                                <a href="">Shop <i class="fa fa-chevron-down"></i></a>
+                                <div class="header-main-left__dropdown-content">
+                                    <a href="">Item1</a>
+                                    <a href="">Item2</a>
+                                    <a href="">Item3</a>
+                                </div>
+                            </div>
+                            <div class="header-main-left__dropdown">
+                                <a href="">Resources <i class="fa fa-chevron-down"></i></a>
+                                <div class="header-main-left__dropdown-content">
+                                    <a href="">Item1</a>
+                                    <a href="">Item2</a>
+                                    <a href="">Item3</a>
+                                </div>
+                            </div>
+                            <div class="header-main-left__dropdown" style="background-color: #eae5ff;">
+                                <a href="">Sustainabilty  <i class="fa fa-chevron-down"></i></a>
+                                <div class="header-main-left__dropdown-content">
+                                    <a href="">Item1</a>
+                                    <a href="">Item2</a>
+                                    <a href="">Item3</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                   </div>
@@ -56,10 +81,17 @@
                         <div class="header-main-right__icons">
                             <div class="header-main-right__icon"><a href=""> <i class="fa fa-certificate"></i></a></div>
                             <div class="header-main-right__icon"><a href=""> <i class="far fa-heart"></i></a></div>
-                            <div class="header-main-right__icon"><a href="" id="cart-circle"> <span>.</span> <i class="fas fa-shopping-cart"></i></a></div>
+                            <div class="header-main-right__icon" id="cart-circle"><a href="" > <span>.</span> <i class="fas fa-shopping-cart"></i></a></div>
                         </div>     
                         <div class="header-main-right_dashboard">
-                            <div class="header-main-right_dashboard__link"><a></i> Dashboard <i class="fa fa-chevron-down"></i></a></div>
+                            <div class="header-main-right_dashboard__link header-main-left__dropdown">
+                                <a> Dashboard <i class="fa fa-chevron-down"></i></a>
+                                <div class="header-main-left__dropdown-content">
+                                    <a href="">Item1</a>
+                                    <a href="">Item2</a>
+                                    <a href="">Item3</a>
+                                </div>
+                            </div>
                             <div class="header-main-right_dashboard__avatar"><img src="./assets/js_avatar.png" alt=""></div>
                         </div>
                     </div>
@@ -68,10 +100,49 @@
           </div>
       </div>
   </header>
+  <div id="header-reposive-mobile">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="header-reposive-mobile-top">
+                <a href="">Online</a>
+                <a href="">Quotes</a>
+                <a href=""><img src="./assets/waving-hand.png" style="width: 20px"/>Contact us</a>
+            </div>      
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col">
+              <div class="header-main-left">
+                  <div class="header-main-left__logo">
+                      <a href="">inke.</a>
+                  </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="header-main-right">
+                    <div class="header-main-right__link">
+                        <a id="responsive-bars"  href="javascript:void(0);"> <i onclick="navBarFunction()" class="fa fa-bars"></i></a>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="header-main-right__link">
+            <a href=""> <i class="fa fa-certificate"></i><i class="far fa-heart"></i> <i class="fas fa-shopping-cart"></i></a>
+            <a href="#news">Shop <i class="fa fa-chevron-down"></i></a>
+            <a href="#contact">Resources <i class="fa fa-chevron-down"></i></a>
+            <a href="#about">Sustainabilty  <i class="fa fa-chevron-down"></i></a>
+            <a href="">Dashboard </a>
+            <a href="">Profile</a>
+            <a href="">Language</a>
+        </div>
+    </div>
+  </div>
   <section class="container-blogs">
       <div class="container-fluid">
           <div class="row justify-content-between">
-              <div class="col-9">
+              <div class="col-lg-9 col-xs-12 col-sm-12">
                   <div class="container-blogs-left">
                       <div class="container-blog-left__item">
                         <h3>Framework</h3>
@@ -93,7 +164,7 @@
                       </div>
                   </div>
               </div>
-              <div class="col-3">
+              <div class="col-lg-3 col-xs-12 col-sm-12">
                 <div class="container-blogs-right">
                     <h3>Learn</h3>
                     <div class="container-blogs-right-item">
@@ -129,6 +200,38 @@
           </div>
       </div>
   </section>
+
+  <script>
+        function displayWindowSize(){
+            var w = document.documentElement.clientWidth;
+            var h = document.documentElement.clientHeight;
+            if (w <= 768){
+                document.getElementById("header-reposive-mobile").style.display = "block";
+                document.getElementById("header-container").style.display = "none";
+            } else if (w >= 768){
+                document.getElementById("header-reposive-mobile").style.display = "none";
+                document.getElementById("header-container").style.display = "block";
+            }
+
+        }
+        
+        function navBarFunction(){
+            var x = document.getElementById("header-main-right__link");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+
+        // Attaching the event listener function to window's resize event
+        window.addEventListener("resize", displayWindowSize);
+
+        // Calling the function for the first time
+        displayWindowSize();
+  </script>
+
 </body>
 
 </html>
